@@ -5,8 +5,8 @@ Minor mode for emacs to run gradle from emacs and not have to go to a terminal!
 
 # Installation #
 
- install on doom emacs 
- ```lisp
+Installation on doom emacs 
+```lisp
 (package! gradle-mode
   :recipe (:host github :repo "caishuyao/emacs-gradle-mode"))
 ```
@@ -29,29 +29,30 @@ Or just
 when you are ready to use it.
 
 ## Keybindings ##
+Keybindings for doom emacs
 
-* `C-c C-g b`
+* `SPC c g b`
   - run `gradle build`
-* `C-c C-g t`
+* `SPC c g t`
   - run `gradle test`
-* `C-c C-g s`
+* `SPC c g s`
   - run `gradle test -Dsingle.test="user-supplied"`
   - User supplies test to run from prompt
-* `C-c C-g C-d b`
+* `SPC c g d b`
   - run `gradle build --daemon`
-* `C-c C-g C-d t`
+* `SPC c g d t`
   - run `gradle test --daemon`
-* `C-c C-g C-d s`
+* `SPC c g d s`
   - run `gradle -Dsingle.test="user-supplied" --daemon`
   - User supplies test to run from prompt
-* `C-c C-g d`
+* `SPC c g d`
   - run `gradle "user-supplied" --daemon`
   - User supplies tasks to run from prompt
-* `C-c C-g r`
+* `SPC c g r`
   - run `gradle "user-supplied"`
   - User supplies tasks to run from prompt
 
-The prefix `C-d` runs the command with gradle's daemon, or creates one
+The prefix `d` runs the command with gradle's daemon, or creates one
 if it is not already present.
 
 

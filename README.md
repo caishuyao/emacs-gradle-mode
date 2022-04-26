@@ -1,15 +1,16 @@
 emacs-gradle-mode
 =================
-[![Build Status](https://travis-ci.org/jacobono/emacs-gradle-mode.svg?branch=master)]
-(https://travis-ci.org/jacobono/emacs-gradle-mode)
 
 Minor mode for emacs to run gradle from emacs and not have to go to a terminal!
 
 # Installation #
 
-Available on [MELPA](https://melpa.org/):
+ install on doom emacs 
+ ```lisp
+(package! gradle-mode
+  :recipe (:host github :repo "caishuyao/emacs-gradle-mode"))
+```
 
-    M-x package-install gradle-mode
 
 Or you can just dump `gradle-mode.el` in your load path somewhere.
 
@@ -53,29 +54,5 @@ when you are ready to use it.
 The prefix `C-d` runs the command with gradle's daemon, or creates one
 if it is not already present.
 
-# Limitations #
-**Currently**, the only versions of emacs that are passing are _24.3_.
-I plan on trying to look into it more, but both Travis and drone are
-barfing when I try and run the tests with <24.3.
 
-# Contribute #
-If you want to contribute, please fork and submit a pull request!
 
-# Changlog #
-## 0.5.5
-- gradlew support added.  Will find nearest gradlew file and run if
-  `gradle-use-gradlew` is turned on
-
-## 0.5.4
-- CI is breaking from 0.5.4, only version of Emacs that tests execute
-  appropriately is **24.3**
-
-## 0.5.3
-- losing dependencies on `f` and `dash`
-- `gradle-project-find-dir` uses `locate-dominating-file` instead of `f-traverse-upwards`
-
-## 0.5.2
-- mode lighter string changed from _gra_ to _Gradle_
-
-## 0.5
-- First Release
